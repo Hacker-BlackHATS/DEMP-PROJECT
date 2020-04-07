@@ -1,0 +1,119 @@
+_____________________________________________________________________________________________________________________________________
+
+
+• Convert the about page to use a template as well, using a template called about.html .
+
+ANS__ :
+
+In about.html file in templates/rango directory
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango_About</title>
+</head>
+<body>
+
+</body>
+</html>
+
+In views.py
+
+def about(request):
+    return render(request, 'rango/about.html')
+
+_____________________________________________________________________________________________________________________________________
+
+
+• Within the new about.html template, add a picture stored within your project’s static files.
+
+ANS__ :
+
+In about.html file in templates/rango directory
+
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango_About</title>
+</head>
+<body>
+    <div>
+        <strong>THE HIP-FLEXOR EXERCISE</strong><br>
+        <img src="{% static "images/i2.png" %}">
+    </div>
+</body>
+</html>
+_____________________________________________________________________________________________________________________________________
+
+
+• On the about page, include a line that says, This tutorial has been put together by <your-name> .
+
+ANS__ :
+
+In about.html file in templates/rango directory
+
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango_About</title>
+</head>
+<body>
+    <div>
+        <strong>THE HIP-FLEXOR EXERCISE</strong><br>
+        <h4>THIS TUTORIAL HAS BEEN PUT TOGETHER BY HARUTO</h4>
+        <img src="{% static "images/i2.png" %}"><br>
+        <strong><a href="/rango/">BACK_TO_INDEX</a></strong>
+    </div>
+</body>
+</html>
+_____________________________________________________________________________________________________________________________________
+
+
+• In your Django project directory, create a new directory called media , download a picture of a cat and save it to the media 
+	directory as cat.jpg .
+
+ANS__ :
+
+/root/PycharmProjects/DJANGO/tango_with_django_project/media/cat.jpeg
+_____________________________________________________________________________________________________________________________________
+
+
+• In your about page, add in the <img> tag to display the picture of the cat, to ensure that your media is being served correctly. 
+	Keep the static image of Rango in your index page so that your app has working examples of both static and media files.
+
+ANS__ :
+
+In about.html file in templates/rango directory
+
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango_About</title>
+</head>
+<body>
+    <div>
+        <strong>THE HIP-FLEXOR EXERCISE</strong><br>
+        <h4>THIS TUTORIAL HAS BEEN PUT TOGETHER BY HARUTO</h4>
+        <img src="{% static "images/i2.png" %}"><br>
+        <img/><h5>HERE IS THE cat !!!</h5><br>
+        <img src="{{ MEDIA_URL }}cat.jpeg"/><br>
+        <strong><a href="/rango/">BACK_TO_INDEX</a></strong>
+    </div>
+</body>
+</html>
+_____________________________________________________________________________________________________________________________________
+
+

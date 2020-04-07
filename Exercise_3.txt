@@ -1,0 +1,46 @@
+• Create a new view method called about which returns the following HttpResponse : 'Rango says here is the about page.'
+
+ANS__ : 
+
+In views.py
+	
+def about(request):
+    return HttpResponse("Rango says here is the about page.")
+
+_____________________________________________________________________________________________________________________________________
+
+• Map this view to /rango/about/ . For this step, you’ll only need to edit the urls.py of the Rango app. Remember the /rango/ part 	
+	is handled by the projects urls.py .
+
+ANS__ :
+
+In urls.py file of the app
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^about/', views.about, name='about'),
+]
+
+_____________________________________________________________________________________________________________________________________
+
+• Revise the HttpResponse in the index view to include a link to the about page.
+
+ANS__ :
+
+In views.py
+
+def index(request):
+    return HttpResponse("<app_name> says hey there partner !<br/> <a href='/rango/about/'>About</a>")
+_____________________________________________________________________________________________________________________________________
+
+
+• In the HttpResponse in the about view include a link back to the main page.
+
+ANS__ :
+
+In views.py
+
+def about(request):
+    return HttpResponse("Rango says here is the about page.<br/> <a href='/rango/'>Index</a>")
+_____________________________________________________________________________________________________________________________________
+
