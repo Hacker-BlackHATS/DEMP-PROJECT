@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango</title>
+</head>
+<body>
+    <h1>Rango says...</h1>
+    <div>
+        Hey there partner ! <br>
+        <strong>{{ boldmessage }}</strong><br>
+    </div>
+    <div>
+        <a href="/rango/about/">About</a><br>
+        <img src="{% static "images/Image_1.png" %}"
+        alt="Picture of WIZARD'S MASK" /> <!-- New line -->
+    </div>
+    <div>
+        <img/>ANSWER
+        <img src={{ MEDIA_URL }}Media_1.jpg
+        alt="Picture of WIZARD'S WILL" /> <!-- New line -->
+    </div>
+</body>
+</html>
