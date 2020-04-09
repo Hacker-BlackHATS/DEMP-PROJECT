@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5c2247-4500-499d-8472-73086e386126" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/populate_rango.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rango/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rango/migrations/0002_auto_20200408_0755.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rango/migrations/0003_category_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rango/migrations/0004_auto_20200409_0326.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rango/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rango/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,10 +126,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1343" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1586346480820" />
-    <state x="343" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1586363819923">
+    <state x="343" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1586402734647">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="343" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1586363819923" />
+    <state x="343" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1586402734647" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586168027811">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
