@@ -1,0 +1,136 @@
+_____________________________________________________________________________________________________________________________________
+
+
+
+• Update the Category model to include the additional attributes views and likes where the default values for each are both zero 	
+	( 0 ).
+
+ANS__ :
+
+In models.py
+
+class Category(models.Model):
+    name = models.CharField(max_length=128, unique=True)
+    views = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+    def __str__(self):
+        return self.name
+_____________________________________________________________________________________________________________________________________
+
+
+• Make the migrations for your app and then migrate your database to commit the changes.
+
+ANS__ :
+
+##########IN_TERMINAL/COMMAND_PROMPT##########################################################################################<CODE>
+
+$ python3 manage.py makemigrations rango
+_____________________________________________________________________________________________________________________________________
+OUTPUT :
+
+
+	Migrations for 'rango':
+	  rango/migrations/0002_auto_20200409_0458.py
+		- Add field likes to category
+		- Add field views to category
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<END>
+
+##########IN_TERMINAL/COMMAND_PROMPT##########################################################################################<CODE>
+
+$ python3 manage.py migrate
+_____________________________________________________________________________________________________________________________________
+OUTPUT :
+
+
+	Operations to perform:
+	  Apply all migrations: admin, auth, contenttypes, rango, sessions
+	Running migrations:
+	  Applying rango.0002_auto_20200409_0458... OK
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<END>
+
+_____________________________________________________________________________________________________________________________________
+
+
+• Update your population script so that the Python category has 128 views and 64 likes, the Django category has 64 views and 32 
+	likes, and the Other Frameworks category has 32 views and 16 likes.
+
+ANS__ :
+
+In populate_rango.py__<ONLY_CHANGES_ARE_SHOWN>
+
+def populate():
+	............
+    cats = {
+        "Python": {"pages": python_pages, "views": 128, "likes": 64},
+        "Django": {"pages": django_pages, "views": 64, "likes": 32},
+        "Other Frameworks": {"pages": other_pages, "views": 32, "likes": 16}
+    }
+
+    for cat, cat_data in cats.items():
+        c = add_cat(cat, cat_data['views'], cat_data['likes'])
+        for p in cat_data['pages']:
+            add_page(c, p['title'], p['url'])
+     .............
+
+def add_cat(cate, views, likes):
+    c = Category.objects.get_or_create(name=cate, views=views, likes=likes)[0]
+    c.save()
+    return c
+
+.............
+_____________________________________________________________________________________________________________________________________
+
+
+• Delete and recreate your database, populating it with your updated population script.
+
+ANS__ :
+
+1. If you’re running it, stop your Django development server.
+2. For an SQLite database, delete the db.sqlite3 file in your Django project’s directory. It’ll be in the same directory as the 
+	manage.py file.
+3. If you have changed your app’s models, you’ll want to run the $ python manage.py makemigrations <app_name> command, replacing 
+	<app_name> with the name of your Django app (i.e. rango ). Skip this if your models have not changed.
+4. Run the $ python manage.py migrate to create a new database file (if you are running SQLite), and migrate database tables to the 
+	database.
+5. Create a new admin account with the $ python manage.py createsuperuser command.
+6. Finally, run your population script again to insert credible test data into your new database.
+_____________________________________________________________________________________________________________________________________
+
+
+• Complete parts two and seven of the official Django tutorial. These sections will reinforce what you’ve learnt on handling 
+	databases in Django, and show you additional techniques to customising the Django admin interface.
+
+ANS__ :
+
+Done...
+_____________________________________________________________________________________________________________________________________
+
+
+• Customise the admin interface. Change it in such a way so that when you view the Page model, the table displays the category , 
+	the name of the page and the url - just like in the screenshot shown below. You will need to complete the previous exercises or 
+	at least go through the official Django Tutorial to complete this exercise.
+
+ANS__ :
+
+In admin.py
+
+from django.contrib import admin
+from rango.models import Category, Page
+
+
+class PageAdmin(admin.ModelAdmin):
+    list_display = ['title', 'category', 'url']
+
+
+admin.site.register(Category)
+admin.site.register(Page, PageAdmin)
+
+_____________________________________________________________________________________________________________________________________
+
+

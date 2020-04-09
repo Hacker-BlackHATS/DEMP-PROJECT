@@ -2,18 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5c2247-4500-499d-8472-73086e386126" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Exercise_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/cat.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/i1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/i2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/rango/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/rango/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exercise_5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poll/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/populate_rango.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rango/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rango/migrations/0002_auto_20200409_0458.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercise_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rango/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rango/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rango/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tango_with_django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tango_with_django_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tango_with_django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tango_with_django_project/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -109,17 +116,17 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1343" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1586258664658" />
-    <state x="343" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1586151408016">
+    <state x="343" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1586424623494">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="343" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1586151408016" />
+    <state x="343" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1586424623494" />
     <state x="455" y="317" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586260934182">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="455" y="317" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1586260934182" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586168027811">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586439096325">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1586168027811" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1586439096325" />
   </component>
 </project>
