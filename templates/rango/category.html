@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rango_Index</title>
+</head>
+<body>
+    <div>
+        {% if category %}
+            <h1>{{ category.name }}</h1>
+            {% if pages %}
+                <ol>
+                {% for page in pages %}
+                    <li><a href="{{ page.url }}">{{ page.title }}</a> </li>
+                {% endfor %}
+                </ol>
+            {% else %}
+                <strong>There are no pages present.</strong>
+            {% endif %}
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+    </div>
+</body>
+</html>

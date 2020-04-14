@@ -1,7 +1,6 @@
 _____________________________________________________________________________________________________________________________________
 
 
-
 • Update the population script to add some value to the views count for each page.
 
 ANS__ :
